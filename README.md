@@ -1,2 +1,3 @@
-# odin-etch-a-sketch
-The Odin Project | Etch-a-Sketch
+# The Odin Project | Etch-a-Sketch
+
+Making Etch-a-Sketch using Javascript to practise DOM manipulation
