@@ -1,3 +1,11 @@
+// generate random color
+const randomColor = () => {
+  let r = Math.floor(Math.random() * 256); // Random between 0-255
+  let g = Math.floor(Math.random() * 256); // Random between 0-255
+  let b = Math.floor(Math.random() * 256); // Random between 0-255
+  return 'rgb(' + r + ',' + g + ',' + b + ')';
+};
+
 // draw the grid
 function drawGrid(size) {
     const container = document.querySelector('#container')
@@ -15,7 +23,7 @@ function drawGrid(size) {
     // add color on hover
     let squares = document.querySelectorAll('div.square')
     squares.forEach((e) => {
-        e.addEventListener("mouseover", () => e.style.background = "blue")
+        e.addEventListener("mouseover", () => e.style.background = randomColor())
     })
 }
 
