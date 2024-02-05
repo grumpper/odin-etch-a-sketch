@@ -1,9 +1,9 @@
 // generate random color
 const randomColor = () => {
-  let r = Math.floor(Math.random() * 256); // Random between 0-255
-  let g = Math.floor(Math.random() * 256); // Random between 0-255
-  let b = Math.floor(Math.random() * 256); // Random between 0-255
-  return 'rgb(' + r + ',' + g + ',' + b + ')';
+    let r = Math.floor(Math.random() * 256); // Random between 0-255
+    let g = Math.floor(Math.random() * 256); // Random between 0-255
+    let b = Math.floor(Math.random() * 256); // Random between 0-255
+    return 'rgb(' + r + ',' + g + ',' + b + ')';
 };
 
 // draw the grid
@@ -27,13 +27,13 @@ function drawGrid(size) {
     })
 }
 
-// setup button
+// setup button 
 const button = document.querySelector('#setup-btn')
 let gridSize = 16
 drawGrid(gridSize)
 button.addEventListener('click', () => {
     do {
-        gridSize = prompt("How many square per row should be the grid?")
-    } while (gridSize < 16 && gridSize > 100)
+        gridSize = parseInt(prompt("How many square per row should be the grid?"))
+    } while (gridSize < 1 || gridSize > 100)
     drawGrid(gridSize)
 })
